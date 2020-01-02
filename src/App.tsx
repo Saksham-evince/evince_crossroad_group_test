@@ -11,7 +11,7 @@ const App: React.FC = () => {
   }, [])
 
   function callApi() {
-    fetch("https://api.github.com/repos/Saksham-evince/git_tutorial/commits", {
+    fetch("https://api.github.com/repos/Saksham-evince/evince_crossroad_group_test/commits", {
       method: "GET",
       headers: {
         'Accept': 'application/json',
@@ -40,11 +40,11 @@ const App: React.FC = () => {
               return (
                 <CommitsPage
                   commitMessage={gitData.commit.message}
-                  commitDate={gitData.commit.committer.date}
+                  commitDate={new Date(gitData.commit.committer.date).toUTCString()}
                   committerAvatar={gitData.committer.avatar_url}
                   committerName={gitData.commit.committer.name}
                   sha={gitData.sha}
-                  index = {index}
+                  index = {index + 1}
                 />
               )
             })
