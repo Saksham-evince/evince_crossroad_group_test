@@ -1,3 +1,4 @@
+// Interface for the commitsPage props
 export default interface CommitPageProps {
     commitMessage: string,
     committerAvatar: string,

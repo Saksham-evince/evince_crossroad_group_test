@@ -3,15 +3,7 @@ import { Table, Container, ListGroup, Button, Image } from "react-bootstrap";
 import "./CommitsPage.css";
 import CommitPageProps from '../interface/gitData.interface'
 
-// interface pageProps {
-//     commitMessage: string,
-//     committerAvatar: string,
-//     committerName: string,
-//     commitDate: string,
-//     sha: string,
-//     // callApi: function
-// }
-
+// Component to render the API data 
 const CommitsPage: React.FC<CommitPageProps> = (props) => {
     const { commitMessage, committerAvatar, committerName, commitDate, sha, index } = props
     return (

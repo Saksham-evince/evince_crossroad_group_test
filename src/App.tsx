@@ -3,6 +3,7 @@ import CommitsPage from './components/CommitsPage';
 import './App.css';
 import { Table, Container, ListGroup, Button, Image } from "react-bootstrap";
 
+// Main page container
 const App: React.FC = () => {
   const [data, setData] = useState([])
 
@@ -10,6 +11,7 @@ const App: React.FC = () => {
     callApi();
   }, [])
 
+  //API caller function.
   function callApi() {
     fetch("https://api.github.com/repos/Saksham-evince/evince_crossroad_group_test/commits", {
       method: "GET",
